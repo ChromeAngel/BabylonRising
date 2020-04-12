@@ -28,7 +28,7 @@ public class AudioSourceSet : MonoBehaviour {
 
     private void ReshuffleClips()
     {
-        shuffledClips = Chance.sShuffle<AudioClip>(clips);
+        shuffledClips = Chance.Shuffle<AudioClip>(clips);
         nextClip = 0;
     }
 
@@ -59,7 +59,7 @@ public class AudioSourceSet : MonoBehaviour {
             return;
         }
 
-        source.pitch = Chance.sRandom(maxPitch, minPitch);
+        source.pitch = Chance.RandomFloat(maxPitch, minPitch);
         source.clip = Clip;
         source.Play();
     }
@@ -75,7 +75,7 @@ public class AudioSourceSet : MonoBehaviour {
         }
 
         Debug.LogFormat("{0} PlayOne is playing {1}", this.PathID(), Clip.name);
-        source.pitch = Chance.sRandom(maxPitch, minPitch);
+        source.pitch = Chance.RandomFloat(maxPitch, minPitch);
         source.clip = Clip;
         source.PlayOneShot(Clip);
     }

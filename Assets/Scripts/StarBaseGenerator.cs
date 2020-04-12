@@ -29,7 +29,7 @@ public class StarBaseGenerator : MonoBehaviour
       //  Debug.LogFormat("{0} root prefabs", rootPrefabs.Count());
         var rootPrefab =  GameObject.Instantiate(Chance.Pick<GameObject>(catalog.Hubs));
 
-        rootPrefab.transform.localScale = Vector3.one * Chance.Random(MinScale, MaxScale);
+        rootPrefab.transform.localScale = Vector3.one * Chance.RandomFloat(MinScale, MaxScale);
 
         rootPrefab.transform.position = transform.position;
        // rootPrefab.transform.rotation = Quaternion.Euler(Chance.Vector(360f));
@@ -62,7 +62,7 @@ public class StarBaseGenerator : MonoBehaviour
             {
                 if(levels > 0)
                 {
-                    float f = Chance.Random(1f);
+                    float f = Chance.RandomFloat(1f);
 
                     if (f < rootConnector.RootRatio)
                     {
@@ -106,7 +106,7 @@ public class StarBaseGenerator : MonoBehaviour
                 {
                     if (module.isScalable)
                     {
-                        branch.transform.localScale = Vector3.one * Chance.Random(rootConnector.MaxScale, rootConnector.MinScale);
+                        branch.transform.localScale = Vector3.one * Chance.RandomFloat(rootConnector.MaxScale, rootConnector.MinScale);
                     }
                     else
                     {

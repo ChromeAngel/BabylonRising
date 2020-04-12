@@ -17,9 +17,9 @@ public class Chance : MonoBehaviour
     /// <param name="min">minimum possible result</param>
     /// <returns>a random integer between min and max</returns>
     /// <remarks>Used as the basis of randomness for picking and shuffling</remarks>
-    public int Random(int max, int min=0)
+    public int InstanceRandomInt(int max, int min=0)
     {
-        return sRandom(max, min);
+        return RandomInt(max, min);
     }
 
     /// <summary>
@@ -29,7 +29,7 @@ public class Chance : MonoBehaviour
     /// <param name="min">minimum possible result</param>
     /// <returns>a random integer between min and max</returns>
     /// <remarks>Used as the basis of randomness for picking and shuffling</remarks>
-    public static int sRandom(int max, int min = 0)
+    public static int RandomInt(int max, int min = 0)
     {
         if (max == min) return max;
 
@@ -53,9 +53,9 @@ public class Chance : MonoBehaviour
     /// <param name="max">maximum possible result</param>
     /// <param name="min">minimum possible result</param>
     /// <returns>a random float between min and max</returns>
-    public float Random(float max, float min = 0f)
+    public float InstanceRandomFloat(float max, float min = 0f)
     {
-        return sRandom(max, min);
+        return RandomFloat(max, min);
     }
 
     /// <summary>
@@ -64,8 +64,17 @@ public class Chance : MonoBehaviour
     /// <param name="max">maximum possible result</param>
     /// <param name="min">minimum possible result</param>
     /// <returns>a random float between min and max</returns>
-    public static float sRandom(float max, float min = 0f)
+    public static float RandomFloat(float max, float min = 0f)
     {
+        if (max == min) return max;
+
+        if (max < min)
+        {
+            float junk = min;
+            min = max;
+            max = junk;
+        }
+
         return UnityEngine.Random.Range(min, max);
     }
 
@@ -90,9 +99,9 @@ public class Chance : MonoBehaviour
 
         Vector3 result;
 
-        result.x = Random(max, min);
-        result.y = Random(max, min);
-        result.z = Random(max, min);
+        result.x = InstanceRandomFloat(max, min);
+        result.y = InstanceRandomFloat(max, min);
+        result.z = InstanceRandomFloat(max, min);
 
         return result;
     }
@@ -103,18 +112,7 @@ public class Chance : MonoBehaviour
     /// <param name="origin">center of the sphere</param>
     /// <param name="radius">how far out from origin the result should be</param>
     /// <returns></returns>
-    public Vector3 VectorOnSphere(Vector3 origin, float radius)
-    {
-        return sVectorOnSphere(origin, radius);
-    }
-
-    /// <summary>
-    /// Random spot on the surface of a sphere
-    /// </summary>
-    /// <param name="origin">center of the sphere</param>
-    /// <param name="radius">how far out from origin the result should be</param>
-    /// <returns></returns>
-    public static Vector3 sVectorOnSphere(Vector3 origin, float radius)
+    public static Vector3 VectorOnSphere(Vector3 origin, float radius)
     {
         return origin + (UnityEngine.Random.onUnitSphere * radius);
     }
@@ -139,7 +137,7 @@ public class Chance : MonoBehaviour
             result.Add(value);
         }
 
-        return Shuffle<float>(result);
+        return InstanceShuffle<float>(result);
     }
 
     public float[] StandardDistributionSet(int numberOfValues, float minValue, float maxValue)
@@ -167,7 +165,7 @@ public class Chance : MonoBehaviour
             radian += increment;
         }
 
-        return Shuffle<float>(result);
+        return InstanceShuffle<float>(result);
     }
 
     /// <summary>
@@ -176,9 +174,9 @@ public class Chance : MonoBehaviour
     /// <typeparam name="T">type of items in the range</typeparam>
     /// <param name="range">range of items of type T</param>
     /// <returns>a random item from within the range provided or the default T for an empty range</returns>
-    public T Pick<T>(IEnumerable<T> range)
+    public T InstancePick<T>(IEnumerable<T> range)
     {
-        return sPick<T>(range);
+        return Pick<T>(range);
     }
 
     /// <summary>
@@ -187,7 +185,7 @@ public class Chance : MonoBehaviour
     /// <typeparam name="T">type of items in the range</typeparam>
     /// <param name="range">range of items of type T</param>
     /// <returns>a random item from within the range provided or the default T for an empty range</returns>
-    public static T sPick<T>(IEnumerable<T> range)
+    public static T Pick<T>(IEnumerable<T> range)
     {
         if (range == null) return default(T);
 
@@ -196,7 +194,7 @@ public class Chance : MonoBehaviour
         if (itemCount == 0) return default(T);
         if (itemCount == 1) return range.First();
 
-        int index = sRandom(itemCount, 1) - 1;
+        int index = RandomInt(itemCount, 1) - 1;
 
         return range.ToArray<T>()[index];
     }
@@ -208,9 +206,9 @@ public class Chance : MonoBehaviour
     /// <param name="source">range of items of type T</param>
     /// <param name="rounds">number of times the items should be shuffled, more rounds = more random</param>
     /// <returns>a re-sequenced array of all the items in source</returns>
-    public T[] Shuffle<T>(IEnumerable<T> source, int rounds = 7)
+    public T[] InstanceShuffle<T>(IEnumerable<T> source, int rounds = 7)
     {
-        return sShuffle<T>(source, rounds);
+        return Shuffle<T>(source, rounds);
     }
 
     /// <summary>
@@ -220,7 +218,7 @@ public class Chance : MonoBehaviour
     /// <param name="source">range of items of type T</param>
     /// <param name="rounds">number of times the items should be shuffled, more rounds = more random</param>
     /// <returns>a re-sequenced array of all the items in source</returns>
-    public static T[] sShuffle<T>(IEnumerable<T> source, int rounds = 7)
+    public static T[] Shuffle<T>(IEnumerable<T> source, int rounds = 7)
     {
         var result = source.ToArray<T>();
 
@@ -230,7 +228,7 @@ public class Chance : MonoBehaviour
         {
             for (int i = 1; i < result.Length; i++)
             {
-                int y = i + sRandom(result.Length - (i + 1) );
+                int y = i + RandomInt(result.Length - (i + 1) );
 
                 T placeHolder = result[i - 1];
                 result[i - 1] = result[y];

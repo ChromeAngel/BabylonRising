@@ -97,6 +97,7 @@ public class HUD : MonoBehaviour {
     void Start()
     {
         Cursor.SetCursor(ClearCursor, new Vector2(8f,8f), CursorMode.Auto);
+        Cursor.lockState = CursorLockMode.Locked;
 
         var _player = GameObject.FindGameObjectWithTag("Player");
         player_cmbt = _player.GetComponent<Combattent>();

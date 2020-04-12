@@ -77,9 +77,9 @@ public class NebulaCloud : MonoBehaviour {
                     {
                         var goChild = new GameObject(name + "_" + i.ToString());
                         goChild.transform.SetParent(transform);
-                        goChild.transform.position = Chance.sVectorOnSphere(Vector3.zero, radius / 2f);
+                        goChild.transform.position = Chance.VectorOnSphere(Vector3.zero, radius / 2f);
                         goChild.transform.localScale = transform.localScale * 0.5f;
-                        goChild.transform.rotation = Quaternion.Euler(0f, 0f, Chance.sRandom(359f));
+                        goChild.transform.rotation = Quaternion.Euler(0f, 0f, Chance.RandomFloat(359f));
 
                         var childSprite = goChild.AddComponent<SpriteRenderer>();
                         childSprite.sprite = sprite.sprite;

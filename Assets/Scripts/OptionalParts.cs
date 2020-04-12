@@ -7,9 +7,9 @@ public class OptionalParts : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        parts = Chance.sShuffle<GameObject>(parts);
+        parts = Chance.Shuffle<GameObject>(parts);
 
-        int dump = Chance.sRandom(parts.Length);
+        int dump = Chance.RandomInt(parts.Length);
 
 		for(int i=0;i< dump; i++)
         {

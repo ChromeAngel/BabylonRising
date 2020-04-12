@@ -13,18 +13,18 @@ public class AsteroidBelt : MonoBehaviour {
 
     public Transform targetPoint;
 
-    private Chance Chance;
+    private Chance _chance;
 
 	// Use this for initialization
 	void Start () {
-        Chance = GetComponent<Chance>();
+        _chance = GetComponent<Chance>();
 
         generate();
 	}
 	
 	public void generate()
     {
-        float[] scales = Chance.StandardDistributionSet(instances, minScale, maxScale);
+        float[] scales = _chance.StandardDistributionSet(instances, minScale, maxScale);
 
         //Debug.LogFormat("StandardDistributionSet of {0} items from {1} to {2}:", instances, minScale, maxScale);
         //foreach(float s in scales)
@@ -50,16 +50,16 @@ public class AsteroidBelt : MonoBehaviour {
     private void MakeAsteroid(float scale, Vector3 diffOffsetMin, Vector3 diffOffsetMax, Vector3 lastPosition)
     {
         Vector3 position = lastPosition;
-        position.x += Chance.Random(diffOffsetMin.x, diffOffsetMax.x);
-        position.y += Chance.Random(diffOffsetMin.y, diffOffsetMax.y);
-        position.z += Chance.Random(diffOffsetMin.y, diffOffsetMax.y);
+        position.x += Chance.RandomFloat(diffOffsetMin.x, diffOffsetMax.x);
+        position.y += Chance.RandomFloat(diffOffsetMin.y, diffOffsetMax.y);
+        position.z += Chance.RandomFloat(diffOffsetMin.y, diffOffsetMax.y);
 
         Vector3 aScale;
         aScale.x = scale;
-        aScale.y = Chance.Random(scale * 0.6f, scale * 1.4f);
-        aScale.z = Chance.Random(scale * 0.6f, scale * 1.4f);
+        aScale.y = Chance.RandomFloat(scale * 0.6f, scale * 1.4f);
+        aScale.z = Chance.RandomFloat(scale * 0.6f, scale * 1.4f);
 
-        Vector3 rot = Chance.Vector(359f);
+        Vector3 rot = _chance.Vector(359f);
 
         GameObject Asteroid = GameObject.Instantiate(Chance.Pick(prefabs));
 
@@ -77,9 +77,9 @@ public class AsteroidBelt : MonoBehaviour {
 
         AsteroidBody.mass = asteroidDensity * aScale.magnitude;
 
-        if(Chance.Random(100) < 30)
+        if(Chance.RandomInt(100) < 30)
         {
-            Vector3 spin = Chance.Vector(6f / aScale.magnitude); //6f ~ 2 pi or 1 rotation per second, spinnign bigger rocks more slowly
+            Vector3 spin = _chance.Vector(6f / aScale.magnitude); //6f ~ 2 pi or 1 rotation per second, spinnign bigger rocks more slowly
 
             AsteroidBody.angularVelocity = spin;
         }

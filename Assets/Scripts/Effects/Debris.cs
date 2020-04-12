@@ -40,13 +40,13 @@ public class Debris : MonoBehaviour {
     private void CreateDebris(Vector3 origin)
     {
         Vector3 offset = transform.localScale * 6f;
-        offset.x = _chance.Random(1f) * offset.x;
-        offset.y = _chance.Random(1f) * offset.y;
-        offset.z = _chance.Random(1f) * offset.z;
+        offset.x = Chance.RandomFloat(1f) * offset.x;
+        offset.y = Chance.RandomFloat(1f) * offset.y;
+        offset.z = Chance.RandomFloat(1f) * offset.z;
 
         Vector3 chunkOrigin = origin + offset;
 
-        GameObject prefab = _chance.Pick<GameObject>(debrisPrefabs);
+        GameObject prefab = Chance.Pick<GameObject>(debrisPrefabs);
         GameObject chunk = GameObject.Instantiate(prefab, chunkOrigin, Quaternion.Euler(_chance.Vector(360f)), transform.parent);
 
         Rigidbody crb = chunk.GetComponent<Rigidbody>();

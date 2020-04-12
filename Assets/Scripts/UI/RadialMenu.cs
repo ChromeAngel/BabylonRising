@@ -77,6 +77,7 @@ public class RadialMenu : MonoBehaviour {
     {
         if (IsOpen) return;
 
+        Cursor.lockState = CursorLockMode.None;
         MenuItemsContainer.SetActive(true);
         is_open = true;
     }
@@ -85,6 +86,7 @@ public class RadialMenu : MonoBehaviour {
     {
         if (IsClosed) return;
 
+        Cursor.lockState = CursorLockMode.Locked;
         MenuItemsContainer.SetActive(false);
         is_open = false;
     }
