@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e745bb469c77dbf459d3f64da4ccaf10, type: 3}
+  m_Name: XenoStarbaseModules
+  m_EditorClassIdentifier: 
+  Hubs:
+  - {fileID: 1933068691451654, guid: 07fa15296e507564aa41e753ddfc6fde, type: 2}
+  - {fileID: 1810464899964230, guid: c6b348da32feebd47bf05d9e944a4518, type: 2}
+  - {fileID: 1879653981652696, guid: a3df9c301802e2f409e7790f51cd4c59, type: 2}
+  - {fileID: 1028084335256994, guid: 4bd7d0aa7a8a21f4592fc9b6a9a4272b, type: 2}
+  Branches:
+  - {fileID: 1712390192999386, guid: 6c65f9abda58eaa42bb64672a94110eb, type: 2}
+  - {fileID: 1939563779325380, guid: 5cf5a59cb8ea5ee40b00f67182e596c5, type: 2}
+  - {fileID: 1403799709054680, guid: 7523b04fc592a734e87c346ebcdf8fb1, type: 2}
+  Leaves:
+  - {fileID: 1424651914883846, guid: 33f781f7976585f49b1c5d94928e0d86, type: 2}
+  - {fileID: 1699818896823976, guid: 7b043566b3110e14e8b7b32dc3416e8a, type: 2}
+  - {fileID: 1935343262562318, guid: 475b2260718f7f6488189afe37fd6917, type: 2}
+  - {fileID: 1974655077967492, guid: 4415ff214028b4d40aecb9ff39c8ad73, type: 2}
+  - {fileID: 1659664765079320, guid: a265e4ff6e2b43347b8d8aa51d98450f, type: 2}
+  - {fileID: 1829906179929740, guid: 7d20bd1ceae6adc49879b133e482d386, type: 2}
+  - {fileID: 1807547207787686, guid: 69e367b72d2ac9a4e9e8553d887baca5, type: 2}

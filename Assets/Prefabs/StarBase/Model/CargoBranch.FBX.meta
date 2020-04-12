@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: f6f2ae7661149f0419e8c263bac4adf0
+timeCreated: 1549791876
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: CargoContainer
+    100004: CargoContainer001
+    100006: CargoContainer002
+    100008: CargoContainer003
+    100010: CargoContainer004
+    100012: CargoContainer005
+    100014: CargoContainer006
+    100016: CargoContainer007
+    100018: CargoContainer008
+    100020: CargoContainer009
+    100022: CargoContainer010
+    100024: CargoContainer011
+    100026: CargoContainer012
+    100028: CargoContainer013
+    100030: CargoContainer014
+    100032: CargoContainer015
+    100034: CargoContainer016
+    100036: CargoContainer017
+    100038: Cylinder001
+    100040: Cylinder002
+    100042: Cylinder003
+    100044: Cylinder004
+    100046: Cylinder005
+    100048: Cylinder006
+    100050: Cylinder007
+    100052: Cylinder008
+    100054: Cylinder009
+    100056: Cylinder010
+    100058: Cylinder011
+    100060: Cylinder012
+    400000: //RootNode
+    400002: CargoContainer
+    400004: CargoContainer001
+    400006: CargoContainer002
+    400008: CargoContainer003
+    400010: CargoContainer004
+    400012: CargoContainer005
+    400014: CargoContainer006
+    400016: CargoContainer007
+    400018: CargoContainer008
+    400020: CargoContainer009
+    400022: CargoContainer010
+    400024: CargoContainer011
+    400026: CargoContainer012
+    400028: CargoContainer013
+    400030: CargoContainer014
+    400032: CargoContainer015
+    400034: CargoContainer016
+    400036: CargoContainer017
+    400038: Cylinder001
+    400040: Cylinder002
+    400042: Cylinder003
+    400044: Cylinder004
+    400046: Cylinder005
+    400048: Cylinder006
+    400050: Cylinder007
+    400052: Cylinder008
+    400054: Cylinder009
+    400056: Cylinder010
+    400058: Cylinder011
+    400060: Cylinder012
+    2100000: No Name
+    2100002: 'Material #25'
+    2300000: CargoContainer
+    2300002: CargoContainer001
+    2300004: CargoContainer002
+    2300006: CargoContainer003
+    2300008: CargoContainer004
+    2300010: CargoContainer005
+    2300012: CargoContainer006
+    2300014: CargoContainer007
+    2300016: CargoContainer008
+    2300018: CargoContainer009
+    2300020: CargoContainer010
+    2300022: CargoContainer011
+    2300024: CargoContainer012
+    2300026: CargoContainer013
+    2300028: CargoContainer014
+    2300030: CargoContainer015
+    2300032: CargoContainer016
+    2300034: CargoContainer017
+    2300036: Cylinder001
+    2300038: Cylinder002
+    2300040: Cylinder003
+    2300042: Cylinder004
+    2300044: Cylinder005
+    2300046: Cylinder006
+    2300048: Cylinder007
+    2300050: Cylinder008
+    2300052: Cylinder009
+    2300054: Cylinder010
+    2300056: Cylinder011
+    2300058: Cylinder012
+    3300000: CargoContainer
+    3300002: CargoContainer001
+    3300004: CargoContainer002
+    3300006: CargoContainer003
+    3300008: CargoContainer004
+    3300010: CargoContainer005
+    3300012: CargoContainer006
+    3300014: CargoContainer007
+    3300016: CargoContainer008
+    3300018: CargoContainer009
+    3300020: CargoContainer010
+    3300022: CargoContainer011
+    3300024: CargoContainer012
+    3300026: CargoContainer013
+    3300028: CargoContainer014
+    3300030: CargoContainer015
+    3300032: CargoContainer016
+    3300034: CargoContainer017
+    3300036: Cylinder001
+    3300038: Cylinder002
+    3300040: Cylinder003
+    3300042: Cylinder004
+    3300044: Cylinder005
+    3300046: Cylinder006
+    3300048: Cylinder007
+    3300050: Cylinder008
+    3300052: Cylinder009
+    3300054: Cylinder010
+    3300056: Cylinder011
+    3300058: Cylinder012
+    4300000: CargoContainer
+    4300002: CargoContainer001
+    4300004: CargoContainer002
+    4300006: CargoContainer003
+    4300008: CargoContainer004
+    4300010: CargoContainer005
+    4300012: Cylinder001
+    4300014: Cylinder002
+    4300016: CargoContainer006
+    4300018: CargoContainer007
+    4300020: CargoContainer008
+    4300022: CargoContainer009
+    4300024: CargoContainer010
+    4300026: Cylinder003
+    4300028: Cylinder004
+    4300030: CargoContainer011
+    4300032: CargoContainer012
+    4300034: CargoContainer013
+    4300036: CargoContainer014
+    4300038: CargoContainer015
+    4300040: CargoContainer016
+    4300042: Cylinder005
+    4300044: Cylinder006
+    4300046: CargoContainer017
+    4300048: Cylinder007
+    4300050: Cylinder008
+    4300052: Cylinder009
+    4300054: Cylinder010
+    4300056: Cylinder011
+    4300058: Cylinder012
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

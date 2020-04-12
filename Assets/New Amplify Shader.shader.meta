@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 998b6c4009baf4745b8a27c9087ddabc
+timeCreated: 1574370180
+licenseType: Free
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _HyperSpace: {fileID: 2800000, guid: 6253ea1faaf04fb4abf901904e4bbcee, type: 3}
+  - _AlphaMask: {fileID: 2800000, guid: 5b70e7dddbf741d4eab11462961f1606, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
